@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RUCKUS with WebRTC</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <h1>RUCKUS with WebRTC</h1>
+
+  <video id="localVideo" autoplay playsinline></video>
+  <!-- 내 웹캠 -->
+  <video id="remoteVideo" autoplay playsinline></video>
+  <!-- 연결할 웹캠 (가정), 실제 애플리케이션에서는 하나는 로컬, 하나는 원격 스트림을 표시한다. 지금은 일단 웹캠 한개니까 같은거 표시-->
+
+  <div>
+    <button id="startButton">시작하기</button>
+    <button id="callButton">연결하기</button>
+    <button id="hangupButton">연결종료</button>
+  </div>
+  
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <!-- adapter.js의 연결이 추가되었다. 
+       adapter는 말그대로 어탭터 뭐 연결이나 이어주는것 같은 역할을 하는데 사양변경이나 접두사??이런 부분을 보완해주는?? 거라고 하는데 아직은 잘 모르겠다. -->
+  <script src="js/main.js"></script>
+</body>
+</html>
